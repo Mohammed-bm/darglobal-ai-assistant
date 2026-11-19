@@ -1,8 +1,7 @@
 fastapi
 uvicorn
-openai
 requests
 beautifulsoup4
 python-dotenv
 numpy
-sentence-transformers
+fastembed
