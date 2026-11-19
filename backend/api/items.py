@@ -5,7 +5,7 @@ from db import cursor
 
 router = APIRouter(prefix="/items", tags=["items"])
 
-@router.get("/")
+@router.get("")
 def list_items():
     """
     Returns all saved notes and URLs

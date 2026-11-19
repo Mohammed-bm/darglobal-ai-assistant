@@ -1,4 +1,8 @@
+import os
 import sqlite3
+from pathlib import Path
+
+DB_PATH = os.getenv("DB_PATH", str(Path(__file__).parent / "items.db"))
 
 conn = sqlite3.connect("items.db", check_same_thread=False)
 cursor = conn.cursor()

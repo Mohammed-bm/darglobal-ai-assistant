@@ -3,17 +3,16 @@ from pydantic import BaseModel
 from typing import List
 import json
 import numpy as np
+from utils import clean_text, embedding_service, llm_service, fetch_and_clean_url
 
 from db import cursor
-from utils import clean_text, EmbeddingService, llm_service
+from utils import clean_text, EmbeddingService, llm_service, fetch_and_clean_url
 
 router = APIRouter(prefix="/query", tags=["query"])
 
-embedding_service = EmbeddingService()
-
 class QueryRequest(BaseModel):
     question: str
-    top_k: int = 3
+    top_k: int = 5
 
 def cosine_similarity(a: np.ndarray, b: np.ndarray) -> float:
     """

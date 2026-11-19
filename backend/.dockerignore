@@ -1,0 +1,13 @@
+.venv
+__pycache__
+*.pyc
+.env
+.git
+seed_pages
+items.seeded.db
+seed.py
+seed_local.py
+seed_darglobal.py
+probe2.py
+test.py
+test_q.py
